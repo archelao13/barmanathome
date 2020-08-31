@@ -1,0 +1,507 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "barman at home",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "BaseChoiceIntent",
+          "slots": [
+            {
+              "name": "Comando",
+              "type": "command"
+            },
+            {
+              "name": "Alcolico",
+              "type": "base"
+            },
+            {
+              "name": "Articolo",
+              "type": "articolo"
+            }
+          ],
+          "samples": [
+            "{Comando} {Alcolico}",
+            "{Alcolico}",
+            "{Comando} una ricetta con {Alcolico}",
+            "{Comando} una ricetta con {Articolo} {Alcolico}"
+          ]
+        },
+        {
+          "name": "DrinkChoiceIntent",
+          "slots": [
+            {
+              "name": "Drink",
+              "type": "drink"
+            },
+            {
+              "name": "Confirmation",
+              "type": "confirmation_status"
+            }
+          ],
+          "samples": [
+            "{Confirmation}",
+            "{Drink}",
+            "Fammi un {Drink}"
+          ]
+        },
+        {
+          "name": "DrinkInstructionIntent",
+          "slots": [
+            {
+              "name": "Istruzioni",
+              "type": "list_command"
+            }
+          ],
+          "samples": [
+            "{Istruzioni}"
+          ]
+        },
+        {
+          "name": "HelpMeIntent",
+          "slots": [
+            {
+              "name": "Argomento",
+              "type": "stuff"
+            },
+            {
+              "name": "Articolo",
+              "type": "articolo"
+            }
+          ],
+          "samples": [
+            "Mi serve aiuto {Articolo} {Argomento}",
+            "Aiuto",
+            "Aiutami"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "scelgo",
+                "synonyms": [
+                  "ho scelto"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "dimmi"
+              }
+            },
+            {
+              "name": {
+                "value": "leggimi"
+              }
+            },
+            {
+              "name": {
+                "value": "dammi"
+              }
+            },
+            {
+              "name": {
+                "value": "fammi"
+              }
+            }
+          ],
+          "name": "command"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "whiskey"
+              }
+            },
+            {
+              "name": {
+                "value": "rum"
+              }
+            },
+            {
+              "name": {
+                "value": "vodka"
+              }
+            },
+            {
+              "name": {
+                "value": "gin"
+              }
+            }
+          ],
+          "name": "base"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "la"
+              }
+            },
+            {
+              "name": {
+                "value": "il"
+              }
+            },
+            {
+              "name": {
+                "value": "nella"
+              }
+            },
+            {
+              "name": {
+                "value": "nel"
+              }
+            },
+            {
+              "name": {
+                "value": "in"
+              }
+            },
+            {
+              "name": {
+                "value": "per"
+              }
+            }
+          ],
+          "name": "articolo"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "fottiti",
+                "synonyms": [
+                  "vaffanculo"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "non mi piace"
+              }
+            },
+            {
+              "name": {
+                "value": "va bene"
+              }
+            },
+            {
+              "name": {
+                "value": "no"
+              }
+            },
+            {
+              "name": {
+                "value": "si",
+                "synonyms": [
+                  "sì"
+                ]
+              }
+            }
+          ],
+          "name": "confirmation_status"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "rum pera"
+              }
+            },
+            {
+              "name": {
+                "value": "black russian"
+              }
+            },
+            {
+              "name": {
+                "value": "gin tonic"
+              }
+            },
+            {
+              "name": {
+                "value": "manhattan"
+              }
+            }
+          ],
+          "name": "drink"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "puoi iniziare"
+              }
+            },
+            {
+              "name": {
+                "value": "vai"
+              }
+            },
+            {
+              "name": {
+                "value": "continua"
+              }
+            },
+            {
+              "name": {
+                "value": "avanti"
+              }
+            }
+          ],
+          "name": "list_command"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "alcolico"
+              }
+            },
+            {
+              "name": {
+                "value": "scelta dei drink",
+                "synonyms": [
+                  "scegliere i drink"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "drink"
+              }
+            },
+            {
+              "name": {
+                "value": "scelta della base",
+                "synonyms": [
+                  "scegliere la base"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "base"
+              }
+            }
+          ],
+          "name": "stuff"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "aranciata"
+              }
+            },
+            {
+              "name": {
+                "value": "coca cola"
+              }
+            },
+            {
+              "name": {
+                "value": "spritz"
+              }
+            },
+            {
+              "name": {
+                "value": "sambuca"
+              }
+            },
+            {
+              "name": {
+                "value": "petrus"
+              }
+            },
+            {
+              "name": {
+                "value": "ramazzotti"
+              }
+            },
+            {
+              "name": {
+                "value": "pillellona"
+              }
+            },
+            {
+              "name": {
+                "value": "pillona"
+              }
+            },
+            {
+              "name": {
+                "value": "corona"
+              }
+            },
+            {
+              "name": {
+                "value": "cane"
+              }
+            }
+          ],
+          "name": "no_input"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "BaseChoiceIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Comando",
+              "type": "command",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {},
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.504254713235.1194904666704.1083651824951"
+                }
+              ]
+            },
+            {
+              "name": "Alcolico",
+              "type": "base",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "Articolo",
+              "type": "articolo",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {},
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.504254713235.479679672371.16958300748"
+                }
+              ]
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "DrinkChoiceIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Drink",
+              "type": "drink",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {},
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1563651634713.880487779660.1053724180828"
+                }
+              ]
+            },
+            {
+              "name": "Confirmation",
+              "type": "confirmation_status",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent.297352310798",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{Drink} è un\u0027ottima scelta. Sei d\u0027accordo?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.504254713235.1194904666704.1083651824951",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Corona"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.504254713235.479679672371.16958300748",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Corona"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.504254713235.796837971385.1230131064818",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Devi inserire una ricetta della lista. Ripeti un alcolico che ti piace e ti consiglierò qualcosa"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1563651634713.880487779660.1053724180828",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Non credo di avere questo drink, puoi comunque chiedere di nuovo un alcolico e vedere la lista"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1563651634713",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ti è tutto chiaro?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.410208568547.479999030914.1430579481688",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Corona"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "48"
+}
