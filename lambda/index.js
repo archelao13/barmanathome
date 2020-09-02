@@ -5,7 +5,7 @@ const SKILL_NAME = "barman at home";
 const STOP_MESSAGE = "Alla prossima.";
 const CANCEL_MESSAGE = "Okay. Vorresti provare un altro drink?";
 
-const HELP_START = "Posso aiutarti a preparare i tuoi drink preferiti ubriacone.";
+const HELP_START = "Posso aiutarti a preparare i tuoi drink preferiti.";
 const HELP_START_REPROMPT = "Dimmi che tipo di cocktail vorresti.";
 const HELP_RECIPE = "Scegli qualsiasi cocktail tu voglia";
 const HELP_RECIPE_REPROMPT = "Chiedimi come fare un cocktail";
@@ -53,10 +53,12 @@ const recipes = {
         {
             name: "dry martini",
             instructions: [
-                "Per preparare il Dry Martini per prima cosa riempite il vostro mixing glass con del ghiaccio così da raffreddare le pareti del bicchiere.Con l'aiuto di uno strainer bloccate poi il ghiaccio e scolate l'acqua in eccesso in una coppetta. ",
+                "Per preparare il Dry Martini",
+                "per prima cosa riempite il vostro mixing glass con del ghiaccio",
                 "Versate il gin e poi il vermouth dry direttamente nel mixing glass.",
-                "Mescolate il tutto con il bar spoon. Versate il contenuto del mixing glass nella coppa raffreddata in freezer. ",
-		"Accompagnate il Martini con delle olive o delle scorze di limone che potete servire, come abbiamo fatto noi, in un bicchiere a parte colmo di ghiaccio tritato per mantenerle fresche."
+                "Mescolate il tutto con il bar spoon.",
+                "Versate il contenuto del mixing glass nella coppa raffreddata in freezer. ",
+		            "Accompagnate il Martini con delle olive o delle scorze di limone."
             ],
             ingredients: [
                 "60 millilitri di gin",
@@ -70,10 +72,12 @@ const recipes = {
 	 {
             name: "negroni",
             instructions: [
-                "Per preparare il Negroni versate il bitter Campari nel bicchiere. Aggiungete poi il Vermouth rosso. Per essere precisi nelle dosi usate il jigger, dosatore usato dai barman. ",
-                "A questo punto versate il gin.Il passo successivo è quello di aggiungere del ghiaccio nel bicchiere:questo passaggio vi consigliamo di farlo ora e non a bicchiere vuoto: in questo modo il ghiaccio non si scalda e il Negroni non si annacqua.",
-		        "In questo caso infatti il ghiaccio rende il cocktail più omogeneo. Mescolate con l'aiuto del bar spoon.",
-                "Guarnite il vostro Negroni con una fettina di arancia. Salute!"
+                "Per preparare il Negroni versate il bitter Campari nel bicchiere.",
+                "Aggiungete poi il Vermouth rosso. ",
+                "A questo punto versate il gin."
+                "Il passo successivo è quello di aggiungere del ghiaccio",
+		            "poi Mescolate e guarnite il vostro Negroni con una fetta di arancia",
+                "Campai!"
             ],
             ingredients: [
                 "30 millilitri di gin",
