@@ -23,9 +23,9 @@ const RECIPE_ADJECTIVES = [
     ". Sicuramente non rimarrai sobrio con questo. ",
     ". Forte e ricco di gusto. ",
 ];
-const SUGGEST_RECIPE = recipeName => `Ho trovato ${recipeName}! Che ne pensi?`;
+const SUGGEST_RECIPE = recipeName => `Ho trovato ${recipeName}! Che ne pensi? `;
 const MISUNDERSTOOD_RECIPE_ANSWER = "Per favore, rispondi con si o no";
-const NO_REMAINING_RECIPE = "Mi dispiace ma non ho più un catalogo. Preferisci un altro drink?"
+const NO_REMAINING_RECIPE = "Mi dispiace ma non ho più un catalogo. Preferisci un altro drink? "
 const INGREDIENTS_INTRO = "Ti serviranno"; // Seguiranno gli ingredienti della ricetta
 const INGREDIENTS_ENDING = "Sembra fatto apposta per te. Che ne pensi?"; // Will be said after the list of ingredients
 
@@ -53,12 +53,12 @@ const recipes = {
         {
             name: "dry martini",
             instructions: [
-                "Per preparare il Dry Martini",
-                "per prima cosa riempite il vostro mixing glass con del ghiaccio",
-                "Versate il gin e poi il vermouth dry direttamente nel mixing glass.",
-                "Mescolate il tutto con il bar spoon.",
+                "Per preparare il Dry Martini. ",
+                "per prima cosa riempite il vostro mixing glass con del ghiaccio. ",
+                "Versate il gin e poi il vermouth dry direttamente nel mixing glass. ",
+                "Mescolate il tutto con il bar spoon. ",
                 "Versate il contenuto del mixing glass nella coppa raffreddata in freezer. ",
-		            "Accompagnate il Martini con delle olive o delle scorze di limone."
+		            "Accompagnate il Martini con delle olive o delle scorze di limone. "
             ],
             ingredients: [
                 "60 millilitri di gin",
@@ -74,9 +74,9 @@ const recipes = {
             instructions: [
                 "Per preparare il Negroni versate il bitter Campari nel bicchiere.",
                 "Aggiungete poi il Vermouth rosso. ",
-                "A questo punto versate il gin."
-                "Il passo successivo è quello di aggiungere del ghiaccio",
-		            "poi Mescolate e guarnite il vostro Negroni con una fetta di arancia",
+                "A questo punto versate il gin. "
+                "Il passo successivo è quello di aggiungere del ghiaccio ",
+		            "poi Mescolate e guarnite il vostro Negroni con una fetta di arancia ",
                 "Campai!"
             ],
             ingredients: [
@@ -94,13 +94,15 @@ const recipes = {
     'vodka': [{
             name: "cosmopolitan",
             instructions: [
-                "Per prima cosa, ancora prima di preparare il Cosmopolitan mettete in freezer la coppetta nella quale servirete il vostro cocktail",
-		        "in modo da averla ben ghiacciata. In uno shaker versate il succo di lime, adoperando il jigger, dosatore da barman molto preciso.Versate poi anche il succo di mirtillo rosso.",
-                "Procedete con la parte alcolica: cointreau e vodka.",
-                "Con l'aiuto di una pinza, aggiungete il ghiaccio a cubetti fino a riempimento della campana di acciaio più piccola che compone lo shaker.",
-                "Inserite tre cubetti di ghiaccionel mixing tin (la campana più grande) dello shaker. Chiudete le due parti dello shaker.Agitate in modo vigoroso.",
-		"Versate il tutto nel bicchiere precedentemente ghiacciato, bloccando il ghiaccio con l'aiuto di uno strainer.",
-		"Completate il vostro Cosmopolitan con una fettina di lime posto al centro del drink con l'aiuto di una pinza.Salute."
+                "Per prima cosa, ancora prima di preparare il Cosmopolitan mettete in freezer la coppetta nella quale servirete il vostro cocktail. ",
+		            "In uno shaker versate il succo di lime e poi anche il succo di mirtillo rosso. ",
+                "Procedete con la parte alcolica: cointreau e vodka. ",
+                "Con l'aiuto di una pinza, aggiungete il ghiaccio a cubetti. ",
+                "Inserite tre cubetti di ghiaccio nel mixing tin (la campana più grande) dello shaker. ",
+                "Chiudete le due parti dello shaker e agitate in modo vigoroso. ",
+	 	            "Versate il tutto nel bicchiere, bloccando il ghiaccio con l'aiuto di uno strainer. ",
+		            "Completate il vostro Cosmopolitan con una fettina di lime posto al centro del drink con l'aiuto di una pinza. ",
+                "Alla Salute."
             ],
             ingredients: [
                 "40 millilitri di vodka",
@@ -114,13 +116,15 @@ const recipes = {
         {
             name: "white russian",
             instructions: [
-                "Per preparare il White Russian cominciate versando direttamente nel bicchiere tumbler basso la vodka e poi il liquore al caffè.",
-                "Aggiungete dei cubetti di ghiaccio fino a riempimento del bicchiere, aiutandovi con una pinza per evitare contaminazioni.",
-                "Mescolate gentilmente con un bar spoon, cucchiaio dal manico lungo utilizzato per miscelare i cocktail. A questo punto semimontate la panna in uno shaker e versatela come top del cocktail.",
-                "Completate il vostro White Russian con dei chicchi di caffè come guarnizione. Buona serata!"
+                "Per preparare il White Russian cominciate versando direttamente nel bicchiere la vodka e poi il liquore al caffè. ",
+                "Aggiungete dei cubetti di ghiaccio fino a riempimento del bicchiere, aiutandovi con una pinza per evitare contaminazioni. ",
+                "Mescolate gentilmente con un bar spoon, cucchiaio dal manico lungo utilizzato per miscelare i cocktail. ",
+                "A questo punto semimontate la panna in uno shaker e versatela come top del cocktail. ",
+                "Completate il vostro White Russian con dei chicchi di caffè come guarnizione. ",
+                "Buona serata! "
             ],
             ingredients: [
-                "Gli ingredienti per il White russian sono pochissimi vodka, liquore al caffè e panna fresca"
+                "Gli ingredienti per il White russian sono pochissimi vodka, liquore al caffè e panna fresca "
 
             ]
         },
@@ -128,12 +132,13 @@ const recipes = {
     'whiskey': [{
             name: "manhattan",
             instructions: [
-                "Per preparare il Manhattan per prima cosa riempite il vostro Mixing glass con del ghiaccio così da raffreddare le pareti del bicchiere.Con l'aiuto di uno strainer bloccate poi il ghiaccio e scolate l'acqua in eccesso in una coppetta. ",
+                "Per preparare il Manhattan per prima cosa riempite il vostro Mixing glass con del ghiaccio così da raffreddare le pareti del bicchiere. ",
                 "Versate nel mixing glass il rye whisky e a seguire il vermouth, misurando la quantità con un jigger.  ",
                 "Aggiungete qualche goccia di angostura e con il bar spoon mescolate il tutto. ",
-                "Versate nella coppa raffreddata in freezer e completate il vostro Manhattan con una guarnizione a base di oli essenziali di arancia:",
-		        "spremete una fetta di buccia d'arancia in modo da far uscire gli oli nel bicchiere e passate la scorza sul bordo e sullo stelo della coppa per diffondere il profumo d'agrume.",
-		        "Terminate il cocktail con una ciliegia al maraschino. Salute!"
+                "Versate nella coppa raffreddata in freezer e completate il vostro Manhattan con una guarnizione a base di oli essenziali di arancia: ",
+		            "spremete una fetta di buccia d'arancia in modo da far uscire gli oli nel bicchiere ",
+                "poi passate la scorza sul bordo e sullo stelo della coppa per diffondere il profumo d'agrume. ",
+		            "Terminate il cocktail con una ciliegia al maraschino. Salute!"
             ],
             ingredients: [
                 "40 millilitri di rye whisky o Canadian whisky",
@@ -149,22 +154,23 @@ const recipes = {
         {
             name: "irish coffee",
             instructions: [
-                "Per un buon Irish coffee la prima cosa da fare è pensare al caffè: quello che vi serve è un caffè filtrato, detto anche caffè all’americana.",
-        		"Preparatelo versando dell'acqua bollente su una quantità di caffè macinato e pressato con l'apposita French press.",
-        		"Lasciatelo riposare in infusione per 12 ore. L'ideale è preparare il caffè un giorno prima.",
-                "Preriscaldate poi il bicchiere in cui servirete il cocktail, versandovi dell’acqua calda che getterete via.Inserite lo zucchero di canna nel bicchiere di servizio.",
-		        "La dose giusta è quella di una bustina: circa 5 grammi.",
-        		"Versate il caffè filtrato caldo e miscelatelo con lo zucchero aiutandovi con un bar spoon, cucchiaio dal manico lungo utilizzato nella preparazione dei cocktail. ",
-        		"A questo punto aggiungete al composto il whiskey irlandese.Semimontate la panna per pochi secondi in uno shaker e adagiatela delicatamente, con l’aiuto di un bar spoon, sulla superficie del composto.",
-        		"Non mescolate. Versate tutta la panna semimontata nel bicchiere. Spolverate con uno strato sottile di noce moscata e servite il cocktail."
+                "Per un buon Irish coffee la prima cosa da fare è pensare al caffè: quello che vi serve è un caffè filtrato, detto anche caffè all’americana. ",
+        		    "Preparatelo versando dell'acqua bollente su una quantità di caffè macinato e pressato con l'apposita French press. ",
+        		    "Lasciatelo riposare in infusione per 12 ore. L'ideale è preparare il caffè un giorno prima. ",
+                "Preriscaldate poi il bicchiere in cui servirete il cocktail, versandovi dell’acqua calda che getterete via. ",
+                "Inserite lo zucchero di canna nel bicchiere di servizio, la dose giusta è quella di una bustina: circa 5 grammi. ",
+        		    "Versate il caffè filtrato caldo e miscelatelo con lo zucchero aiutandovi con un bar spoon, cucchiaio dal manico lungo utilizzato nella preparazione dei cocktail. ",
+        		    "A questo punto aggiungete al composto il whiskey irlandese. ",
+                "Semimontate la panna per pochi secondi in uno shaker e adagiatela delicatamente, con l’aiuto di un bar spoon, sulla superficie del composto. ",
+        		    "Non mescolate. Versate tutta la panna semimontata nel bicchiere. Spolverate con uno strato sottile di noce moscata e servite il cocktail. "
 
             ],
             ingredients: [
                 "5 grammi di zucchero di canna",
-		"90 millilitri di caffè ",
-		"40 millilitri di whisky",
-		"30 millilitri di panna fresca",
-		"e noce moscata per decorazione"
+		            "90 millilitri di caffè ",
+		            "40 millilitri di whisky",
+		            "30 millilitri di panna fresca",
+		            "e noce moscata per decorazione"
 
             ]
         }
@@ -173,13 +179,14 @@ const recipes = {
             name: "mojito",
             instructions: [
                 "La prima cosa da fare per preparare un Mojito è quella di prendere due rametti di menta,spezzarli con le mani e inserirli nel bicchiere.",
-		        "Mettete poi due cucchiai di zucchero di canna bianco.",
-		        "A questo punto versate il succo di lime fresco",
+		            "Mettete poi due cucchiai di zucchero di canna bianco.",
+		            "A questo punto versate il succo di lime fresco",
                 "Con l'aiuto di un bar spoon vivacizzate la menta: stofinatela sulle pareti del bicchiere in modo da far uscire gli oli essenziali di cui l'erba aromatica è ricca.",
-		        "Il bar spoon è un cucchiaino con il manico allungato utilizzato dai barman per la preparazione di cocktail.",
-		        "Aggiungete la soda.",
+		            "Il bar spoon è un cucchiaino con il manico allungato utilizzato dai barman per la preparazione di cocktail.",
+		            "Aggiungete la soda.",
                 "Aggiungete il ghiaccio e il rum bianco. Mescolate il tutto con il bar spoon, che richiama lo zucchero in alto. ",
-		        "Guarnite con un rametto di menta. Il vostro Mojito è pronto. Salute!"
+		            "Guarnite con un rametto di menta. Il vostro Mojito è pronto. Salute! "
+
             ],
             ingredients: [
                 "Due cucchiai di zucchero di canna",
@@ -193,10 +200,10 @@ const recipes = {
             name: "Cuba Libre",
             instructions: [
                 "Per preparare il vostro Cuba libre versate il rum bianco direttamente nel tumbler alto. Riempite poi il bicchiere di ghiaccio.",
-                "Versate la Cola fino a riempimento del bicchiere, in gergo si dice top di Cola.",
-		        "Fate ora uno squeeze and drop con uno spicchietto di lime, che corrisponde a un ottavo:",
-		        "spremete il lime e lasciatelo cadere nel bicchiere.",
-                "Il Cuba libre è pronto. Bevetelo ben freddo."
+                "Versate la Cola fino a riempimento del bicchiere, in gergo si dice top di Cola. ",
+		            "Fate ora uno squeeze and drop con uno spicchietto di lime, che corrisponde a un ottavo: ",
+		            "spremete il lime e lasciatelo cadere nel bicchiere. ",
+                "Il Cuba libre è pronto. Bevetelo ben freddo. "
             ],
             ingredients: [
                 "quarantacinque millilitri di rum ",
