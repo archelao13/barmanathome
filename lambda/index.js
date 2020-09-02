@@ -5,7 +5,7 @@ const SKILL_NAME = "barman at home";
 const STOP_MESSAGE = "Alla prossima.";
 const CANCEL_MESSAGE = "Okay. Vorresti provare un altro drink?";
 
-const HELP_START = "Posso aiutarti a preparare i tuoi drink preferiti.";
+const HELP_START = "Posso aiutarti a preparare i tuoi drink preferiti ubriacone.";
 const HELP_START_REPROMPT = "Dimmi che tipo di cocktail vorresti.";
 const HELP_RECIPE = "Scegli qualsiasi cocktail tu voglia";
 const HELP_RECIPE_REPROMPT = "Chiedimi come fare un cocktail";
@@ -66,7 +66,7 @@ const recipes = {
                 "ghiaccio"
             ]
         },
-	
+
 	 {
             name: "negroni",
             instructions: [
@@ -84,8 +84,8 @@ const recipes = {
             ]
         },
 
-	
-        
+
+
     ],
     'vodka': [{
             name: "cosmopolitan",
@@ -156,9 +156,9 @@ const recipes = {
 
             ],
             ingredients: [
-                "5 grammi di zucchero di canna", 
+                "5 grammi di zucchero di canna",
 		"90 millilitri di caffè ",
-		"40 millilitri di whisky", 
+		"40 millilitri di whisky",
 		"30 millilitri di panna fresca",
 		"e noce moscata per decorazione"
 
@@ -171,7 +171,7 @@ const recipes = {
                 "La prima cosa da fare per preparare un Mojito è quella di prendere due rametti di menta,spezzarli con le mani e inserirli nel bicchiere.",
 		        "Mettete poi due cucchiai di zucchero di canna bianco.",
 		        "A questo punto versate il succo di lime fresco",
-                "Con l'aiuto di un bar spoon vivacizzate la menta: stofinatela sulle pareti del bicchiere in modo da far uscire gli oli essenziali di cui l'erba aromatica è ricca.", 
+                "Con l'aiuto di un bar spoon vivacizzate la menta: stofinatela sulle pareti del bicchiere in modo da far uscire gli oli essenziali di cui l'erba aromatica è ricca.",
 		        "Il bar spoon è un cucchiaino con il manico allungato utilizzato dai barman per la preparazione di cocktail.",
 		        "Aggiungete la soda.",
                 "Aggiungete il ghiaccio e il rum bianco. Mescolate il tutto con il bar spoon, che richiama lo zucchero in alto. ",
@@ -226,7 +226,7 @@ const BaseChoiceIntentHandler = {
     handle(handlerInput) {
         var speechText = 'default';
         const alcolico= handlerInput.requestEnvelope.request.intent.slots.Alcolico.value;
-        
+
         for( let k in recipes){
             if(k === alcolico){
                 speechText='Hai scelto ' + alcolico + ', secondo me ti potrebbero piacere:';
@@ -242,10 +242,10 @@ const BaseChoiceIntentHandler = {
 	            }
             }
         }
-        
+
         if(base_ricetta.length !== 1) speechText+=' quale scegli?';
-        
-        
+
+
         return handlerInput.responseBuilder
                 .speak(speechText)
                 .reprompt(speechText)
@@ -264,7 +264,7 @@ const DrinkChoiceIntentHandler = {
         const confirmation = handlerInput.requestEnvelope.request.intent.slots.Confirmation.value;
         const attributesManager = handlerInput.attributesManager;
         var ingredients;
-        
+
         speechText= 'Questo drink: ' + chosen_drink + ', non ho idea di come farlo. Magari con il prossimo aggiornamento!';
         if(confirmation===undefined){ // l'utente non ha ancora dato conferma
             if(chosen_drink !== undefined){
@@ -309,7 +309,7 @@ const DrinkInstructionIntentHandler = {
                 speechText = 'Ora comincerò a ripeterti passo per passo cosa devi fare. Se vuoi risentire puoi dire ripeti, se vuoi continuare puoi dire avanti.';
             }else{
                 speechText = choice.instructions[istruzione];
-                if(istruzione + 1 < choice.instructions.length){ 
+                if(istruzione + 1 < choice.instructions.length){
                     istruzione++;
                     speechText += ' Per proseguire puoi dire avanti.';
                 }
@@ -355,7 +355,7 @@ const HelpMeIntentHandler = {
     handle(handlerInput) {
         var speakOutput = '<emphasis level="moderate">Voi stupidi umani non capite un cazzo.</emphasis> Di cosa hai bisogno?';
         const aiuto = handlerInput.requestEnvelope.request.intent.slots.Argomento.value;
-        
+
         switch (aiuto){
             case 'base':
             case 'scegliere la base':
@@ -375,7 +375,7 @@ const HelpMeIntentHandler = {
                 speakOutput += 'Per procedere con la prossima istruzione puoi dirmi <break time="0.5s"/>avanti<break time="0.5s"/> oppure <break time="0.5s"/>continua<break time="0.5s"/>. ';
                 speakOutput += 'Attenzione perché non si può tornare indietro. Ti consiglio di finire il procedimento corrente prima di continuare, ma se ti serve che io ripeta, basta chiedermi <break time="0.5s"/>ripeti<break time="0.5s"/>.'
                 break;
-                
+
         }
 
         return handlerInput.responseBuilder
